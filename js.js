@@ -1,13 +1,12 @@
 $(document).ready(function () {
     $.ajax({
         type: "GET",
-        url: "https://rawgit.com/billy1816/Examen-2018/master/xml/preguntas.xml",
+        url: "https://mysafeinfo.com/api/data?list=englishmonarchs&format=xml",
         dataType: "xml",
         success: function (result) {
-            $(result).find("question").each(function () {
-                $("#presidents").append($("<option />").val($(this).attr("id")).text($(this).attr("tittle")));
+            $(result).find("e").each(function () {
+                $("#presidents").append($("<option />").val($(this).attr("cty")).text($(this).attr("nm")));
             });
         }
     });
 });
-
