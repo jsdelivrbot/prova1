@@ -1,11 +1,13 @@
+$(document).ready(function () {
+    $.ajax({
+        type: "GET",
+        url: "https://rawgit.com/billy1816/prova1/master/json/json.json",
+        dataType: "xml",
+        success: function (result) {
+            $(result).find("stateid").each(function () {
+                $("#presidents").append($("<option />").text($(this).attr("statename")));
+            });
+        }
+    });
+});
 
-var jsonData = $.getJSON( 'https://rawgit.com/billy1816/prova1/master/json/json.json')
-     $(document).ready(function () {
-         var listItems = '<option selected="selected" value="0">- Select -</option>';
- 
-      for (var i = 0; i < jsonData.Table.length; i++) {
-             listItems += "<option value='" + jsonData.Table[i].stateid + "'>" + jsonData.Table[i].statename + "</option>";
-         }
- 
-         $("#DLState").html(listItems);
-     });
