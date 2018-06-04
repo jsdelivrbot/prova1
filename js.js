@@ -1,6 +1,6 @@
 
 $(document).ready(function() {	
-var jsonData = $.getJSON( 'hhttps://rawgit.com/billy1816/prova1/master/json/json.json')
+var jsonData = $.getJSON( 'https://rawgit.com/billy1816/prova1/master/json/json.json')
      $(document).ready(function () {
          var listItems = '<option selected="selected" value="0">- Select -</option>';
  
