@@ -9,4 +9,3 @@ var jsonData = $.getJSON( 'https://rawgit.com/billy1816/prova1/master/json/json.
  
          $("#DLState").html(listItems);
      });
-     });
